@@ -8,4 +8,4 @@ cd eth-proxy
 screen -dm -S eth-proxy bash -c "python eth-proxy.py"
 cd -
 
-screen -dm -S cpu-miner bash -c "ethminer -C -F http://127.0.0.1:8080/${HOSTNAME} --farm-recheck 200 -t $MINER_CPU_THREADS"
+screen -dm -S cpu-miner bash -c "./ethminer-cpu -C -F http://127.0.0.1:8080/${HOSTNAME} --farm-recheck 200 -t $MINER_CPU_THREADS"
